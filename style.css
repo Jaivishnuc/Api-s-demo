@@ -1,0 +1,215 @@
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+body{
+    background: rgb(16,16,16);
+    background: linear-gradient(27deg, rgba(16,16,16,1) 75%, rgba(102,4,9,1) 100%);
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: flex-start;
+}
+h2{
+    color: #fff;
+}
+
+.hide{
+    display: none;
+}
+.options{
+    display: inline-flex;
+    justify-content: center;
+    flex-direction: row;
+}
+.content {
+    display: none;
+    margin-top: 10px;
+    padding: 0 20px;
+}
+label {
+    margin: 10px;
+    cursor: pointer;
+}
+
+#option1:checked ~ #content1,
+#option2:checked ~ #content2 {
+    display: block;
+}
+
+input[type="radio"],
+title,
+script {
+    display: none;
+}
+
+/* button style */
+.btns {
+  background: transparent;
+  border: 1px solid #e50914;
+  border-radius: 12px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  outline: transparent;
+  padding: 13px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  white-space: nowrap;
+  width: 180px;
+}
+
+.btns:not([disabled]):focus,
+.btns.active,
+.urlBtn,
+.currencyBtn{
+    background: #e50914;
+    border: none;
+}
+.btns:not([disabled]):hover{
+    background:#a60810;
+    border: 1px solid #a60810;
+}
+
+.urlShortner,
+.currencyConvertor{
+    min-width: 40%;
+    width: auto;
+    height: auto;
+    background: #fff;
+    border-radius: 25px;
+    margin: 25px 0;
+    box-shadow: rgb(195 192 192 / 44%) 0px 7px 29px 0px;
+    padding: 5px 20px;
+}
+
+.heading{
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: 16px 0 0 0;
+}
+.explanation{
+    margin: 16px 0 0 0;
+    color: gray;
+}
+.ipArea{
+    display: flex;
+}
+.ipbox{
+    padding: 13px;
+    border: 1px solid grey;
+    border-radius: 20px;
+    font-size: 1.25rem;
+    outline-color: #e50914;
+}
+
+.ipbox:focus,
+.ipbox:hover,
+.ipbox:focus-Visible{
+    border: 1.5px solid #e50914;
+}
+::placeholder {
+    color: lightgrey;
+    opacity: 1; 
+    font: 1.25rem/3
+}
+
+::-ms-input-placeholder { 
+    color: lightgrey;
+    font: 1.25rem/3
+}
+
+.urlBtn{
+    width: auto;
+    margin: 16px 0;
+}
+
+#output{
+    margin-bottom: 16px;
+}
+
+.outputTxt{
+    margin-top: 0;
+    font-weight: bold;
+}
+
+.resultUrl{
+    padding: 13px;
+    background-color: #ebd4d3;
+    font-weight: bold;
+    font-size: 1.15rem;
+    width:auto;
+}
+
+.opbox{
+    padding: 13px;
+    border-radius: 20px;
+    font-size: 1.25rem;
+    background-color: #ebd4d3;
+    width: 80px;
+    align-items: flex-start;
+}
+
+.box{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    padding: 8px;
+}
+
+.leftBox,
+.rightBox{
+    display: flex;
+    align-items: flex-start;
+    padding: 8px;
+}
+
+.currency {
+    margin: 16px 0;
+    background-color: #564d4d;
+    color: #fff;
+    font-size: 1rem;
+    padding: 10px;
+    max-height: 150px;
+    border-radius: 15px;
+}
+.currencyBtn{
+    margin-bottom: 15px;
+}
+.ipbox.curr{
+    width: 80px;
+}
+.valSec{
+    display:flex;
+    justify-content: flex-start;
+    width: 100%;
+    flex-direction: row;
+}
+#curId1,
+#curId2{
+    font-size: 1.25rem;
+    background-color:#8d9d9a;
+    color: #fff;
+    border-radius: 20px;
+    padding: 13px;
+    margin-left: 20px;
+}
+#warning{
+    margin-bottom: 16px;
+}
+
+.homeBtn{
+    margin:10px;
+    background-color: darkgray;
+    border:1px solid darkgray;
+}

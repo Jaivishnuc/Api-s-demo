@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api's</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="topSec">
+        <h2>Select the feature which you want to use.</h2>
+        <div class="options">
+            <label class="btns">
+                <input type="radio" name="contentOption" value="URL_Shortner" onclick="displayContent('option1', this)"> URL Shortner
+            </label>
+            <label class="btns">
+                <input type="radio" name="contentOption" value="Currency_Converter" onclick="displayContent('option2', this)"> Currency Converter
+            </label>
+        </div>
+    </div>
+    
+    <div id="option1" class="content urlShortner">
+        <div class="heading">URL Shortener</div>
+        <div class="explanation">The lengthy URL can be shortened using TinyURL api.</div>
+        <p class="iptext">Enter a URL to shorten:</p>
+        <div class="ipArea">
+            <input type="text" id="urlInput" placeholder="Enter URL" class="ipbox" required>
+            <button class="btns urlBtn" id="shortenBtn">Shorten URL</button>
+        </div>
+        
+        <div id="output"></div>
+    </div>
+    <div id="option2" class="content currencyConvertor">
+        <div class="heading">Currency Convertor</div>
+        <div class="box" id="box">
+            <div class="leftBox">
+                <div class="from">From:</div>
+                <select name="currency" class="currency" id="country1" onchange="displayCountryId(this)"></select>
+                <div class="valSec">
+                    <input type="number" name="" id="input1" class="ipbox curr">
+                    <div id="curId1">AUD</div>
+                </div>
+            </div>
+            <div class="rightBox">
+                <div class="to">To:</div>
+                <select name="currency" class="currency" id="country2" onchange="displayCountryId(this)"></select>
+                <div class="valSec">
+                    <div class="opbox" id="result">***</div>
+                    <div id="curId2">AUD</div>
+                </div>
+            </div>
+        </div>
+        <div id="warning"></div>
+        <div class="btn">
+            <button class="btns currencyBtn" id="convertBtn">Convert</button>
+        </div>
+        
+    </div>
+    <button id="home" class="btns homeBtn active" onclick="homeClick()">Home</button>
+    <script src="src.js" defer></script>
+</body>
+</html>
